@@ -32,14 +32,30 @@ def sum_diffs(_lists:tuple) -> int:
     return sum(diffs)
 
 
+
+# part 2: similarity score ================================================
+
+
+def similarity(_lists):
+    sims = list()
+    for i in _lists[0]:
+        _count = 0
+        for j in _lists[1]:
+            if i == j:
+                _count += 1
+        sims.append(i * _count)
+    return sum(sims)
+
+
 def answer_part_one():
     example_pth = here("01-hystorian-hysteria/example.txt")
     input_pth = here("01-hystorian-hysteria/input.txt")
     example = load_input(example_pth)
     challenge = load_input(input_pth)
-    print(f"Example output is {sum_diffs(munge_input(example))}")
+    print(f"Part one example is {sum_diffs(munge_input(example))}")
     print(f"Part one solution is: {sum_diffs(munge_input(challenge))}")
-
+    print(f"Part two example is {similarity(munge_input(example))}")
+    print(f"Part two solution is: {similarity(munge_input(challenge))}")
 
 if __name__ == "__main__":
     answer_part_one()
