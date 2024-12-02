@@ -47,7 +47,7 @@ def similarity(_lists):
     return sum(sims)
 
 
-def answer_part_one():
+def answers():
     example_pth = here("01-hystorian-hysteria/example.txt")
     input_pth = here("01-hystorian-hysteria/input.txt")
     example = load_input(example_pth)
@@ -58,4 +58,4 @@ def answer_part_one():
     print(f"Part two solution is: {similarity(munge_input(challenge))}")
 
 if __name__ == "__main__":
-    answer_part_one()
+    answers()
