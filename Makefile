@@ -1,3 +1,4 @@
+# eg make setup name=foobar
 setup:
 	mkdir -p $(name)
 	touch $(name)/example.txt
